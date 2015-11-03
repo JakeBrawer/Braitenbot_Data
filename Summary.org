@@ -1,0 +1,55 @@
+#+LaTeX_CLASS: article
+#+OPTIONS: ':nil *:t -:t ::t <:t  \n:nil ^:t arch:headline author:t c:nil
+#+OPTIONS: creator:nil d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t
+#+OPTIONS: num:nil p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t timestamp:t
+#+OPTIONS: title:t toc:nil todo:t |:t
+#+TITLE: Thesis Summary
+#+DATE: \today
+#+AUTHOR:Jake Brawer
+#+EMAIL: jabrawer@vassar.edu
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 24.5.1 (Org mode 8.3.1)
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \doublespacing
+#+LATEX_HEADER: \usepackage[margin=2.54cm]{geometry}
+
+Folk conceptions of genotype-phenotype mapping functions (G-P maps) err towards the bijective. 
+That is, there is a tendency to view any given gene as having a correspondence with one, and only one 
+trait in a given organism. However, there is an overwhelming amount of evidence suggesting that such a view is completely 
+antithetical to biological reality (Oyama, 1985). What appears to be the case is that, across most organisms,
+ phenotypes are the result of a complex and multi-leveled interaction not only between multiple genes, but between genetic and ontogenetic factors as well. 
+This  interplay is evident from the observation that traits will only manifest if certain genetic factors are present in
+ concert with certain environmental factors ( both intrinsic and extrinsic to the organism). Such “constructive interactionism” 
+is observed at nearly all levels of ontogeny, from zygotic development, e.g. the contribution of the maternal environment to
+ embryonic development (Oyama, 1985) through the organism’s lifetime, e.g. the diathesis-stress model of psychopathology (Walker, 1997).
+ Biological agents, then, are not the products of rigid instruction sets or stochastic causalities, but are highly dynamical beings,
+ subject to a fantastically complex process of co-action between genes and environment, a process that defies our 
+ most heroic parsing efforts.\\
+\indent For  a little over a year, Aaron Hill ('16) and I have been working on a system for evolving the Johuco Ana Bbots (Braitenbots), owned by the 
+Cognitive Science department, that incorporates some of the concepts discussed above. The Braitenbots are essentially analog computers on wheels, with 
+the behavior of each robot determined by easily mutable wire connections that connect components of the computer. We have developed a way to encode
+these wire connections into binary "genomes," which can be then be transmitted to successive generations via a processes that models some of the genetic processes
+underlying sexual reproduction (i.e. genetic recombination). The mapping of a gene (or genes) to a trait (or traits) is determined by the rules used by
+the system to decode and instantiate the genotype (our analogue for development), thereby limiting arbitrary and /a priori/ mapping schemes. Preliminary experiments in simulation
+have confirmed that cross-generational, adaptive evolution is possible using this model. With this in mind I would like to use the model to run a number of experiments
+ probing the mechanics of evolution. More specifically I am interested in delineating the relationship between robustness and evolvability.
+ Both the size of intronic regions (Soule, 2003), and the frequency of recombination events (Hu, Banzhaf, and Moore, 2014) have been shown to facilitate phenotypic robustness 
+and thus adaptive evolution. By running populations of Braitenbots with different parameters, i.e. intron size, recombination point location and distribution, etc. through 
+evolutionary trials, I can evaluate this putative robustness-evolvability relationship. 
+
+* References
+Hu, T., Banzhaf, W., & Moore, J. H. (2014). /The effects of recombination on phenotypic exploration and robustness in evolution./ Artificial life.\\
+\indent Explores the effects of recombination on phenotypic variation in genetic algorithmms. Finds that recombination is not only less disruptive than mutation,
+but promotes the development of robust phenotypes, due in part to the fact that reorganization of genetic components (re: recombination) is generally
+less deleterious than mutational effects.\\
+Oyama, S. (1985). /The ontogeny of information: Developmental systems and evolution/. Cambridge: Cambridge University Press.\\
+\indent Discusses the false dichotomy between genetic and developmental systems. Argues for a "constructive interactionist" approach to development.
+rather than the old genocentric models. Highly influenced the design of this model. \\
+Soule, T. (2003). /Operator choice and the evolution of robust solutions./ In Genetic programming theory and practice (pp. 257-269). Springer US.\\
+\indent Discusses code bloat, the increase in size of intronic regions. Argues that this processes increases the robustness of a
+gene and thus is adaptive.\\
+Walker, E. F., & Diforio, D. (1997). /Schizophrenia: a neural diathesis-stress model./ Psychological review, 104(4), 667. \\ 
+\indent Argues for a diathesis-stress model of schizophrenia, i.e., that both developmental factors (e.g. psychosocial stressors) and 
+genetic factors contribute to schizophrenic symptomatology. A great example of constructive interactionism.\\
