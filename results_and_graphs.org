@@ -463,3 +463,34 @@ This data is averaged from three simulated populations see
 #+RESULTS:
 [[file:random_selection_collisions.png]]
 
+* PRELIMINARY ROBOT RESULTS
+#+tblname: Devo
+| Generation |                 mean |                stderr | mean collisions |    collision stderr | collisions min | collisions max | mean wires |   mean wires stderr |
+|------------+----------------------+-----------------------+-----------------+---------------------+----------------+----------------+------------+---------------------|
+|          1 | 0.010548446575076257 |  0.003138574136663317 |             0.8 | 0.18973665961010275 |              0 |              2 |        3.1 |  0.3301514803843836 |
+|          2 | 0.012084119497794771 | 0.0022960080096615333 |             1.0 |  0.2449489742783178 |              0 |              2 |        2.3 |  0.4012480529547776 |
+|          3 | 0.009464070526297379 | 0.0010573225027413514 |             0.8 | 0.18973665961010278 |              0 |              2 |        1.3 |  0.3754996671103717 |
+|          4 | 0.010773322122650242 | 0.0006979484287934758 |             0.8 |  0.1264911064067352 |              0 |              1 |        1.6 | 0.45166359162544856 |
+
+
+
+#+tblname: NoDevo
+| Generation |                 mean |                stderr | mean collisions |    collision stderr | collisions min | collisions max | mean wires |   mean wires stderr |
+|------------+----------------------+-----------------------+-----------------+---------------------+----------------+----------------+------------+---------------------|
+|          1 | 0.010614970482049855 | 0.0035783049594186045 |             0.4 | 0.28982753492378877 |              0 |              3 |        3.5 | 0.32403703492039304 |
+|          2 | 0.006384541666616885 | 0.0008587768982701861 |             0.8 | 0.27568097504180444 |              0 |              3 |        2.9 |  0.4571651780264984 |
+|          3 | 0.011471280071050942 |  0.001849720185150069 |             0.9 | 0.22135943621178655 |              0 |              2 |        2.4 | 0.20976176963403032 |
+|          4 |   0.0129979721233494 | 0.0019990588758213835 |             0.7 | 0.20248456731316586 |              0 |              2 |        2.3 |  0.3754996671103717 |
+
+#+BEGIN_SRC gnuplot :var data1=Devo data2=NoDevo :file Devo_NoDevo_Fitness_Comparision.png
+  reset
+  set title 'Mean collisions for three randomly selected population'
+  set yrange [0:1]
+  set xrange [0:11]
+  set xlabel 'Generations'
+  set ylabel 'Mean Collisions'
+  plot '$data1' using 1:2:3 with errorbars title 'Devo', \
+  plot '$data1' using 1:2:3 with errorbars title 'No Devo', 
+
+
+#+END_SRC
