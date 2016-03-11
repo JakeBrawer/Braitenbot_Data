@@ -2,5 +2,8 @@ The following organisms had no threads, and a cloned data file was used for them
 devo 4_9
 no_devo 4_5
 devo 4_2
-
+
+**
+devo 4_5
+devo 
 Devo 5_0_4_9_4_05_1_4_5_4_95_2_4_2_4_05_9_4_2_4_05_5_4_9_4_2No Devo5_0_4_3_4_25_1_4_5_4_25_4_4_5_4_75_5_4_2_4_15_7_4_2_4_5
